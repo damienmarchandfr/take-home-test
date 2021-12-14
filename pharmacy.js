@@ -1,4 +1,10 @@
 export class Drug {
+  /**
+   * 
+   * @param {string} name 
+   * @param {number} expiresIn 
+   * @param {number} benefit 
+   */
   constructor(name, expiresIn, benefit) {
     this.name = name;
     this.expiresIn = expiresIn;
@@ -10,6 +16,10 @@ export class Pharmacy {
   constructor(drugs = []) {
     this.drugs = drugs;
   }
+
+  /**
+   * Call each day to update Drugs values
+   */
   updateBenefitValue() {
     for (var i = 0; i < this.drugs.length; i++) {
       if (
